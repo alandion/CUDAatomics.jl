@@ -1,4 +1,4 @@
-julia 0.7.0
-CUDAdrv
+julia 1.0
 CUDAnative
+CuArrays
 LLVM

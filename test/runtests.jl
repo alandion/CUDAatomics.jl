@@ -1,5 +1,5 @@
 using Test
-using CUDAnative, CUDAdrv
+using CUDAnative, CuArrays
 using CUDAatomics
 
 if CUDAnative.configured
