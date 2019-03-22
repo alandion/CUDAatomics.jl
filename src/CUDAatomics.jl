@@ -71,7 +71,7 @@ function atomicexpression(instr::String, nargs, typeindex)
             push!(constraint_list,string(","*type_map[base_type][2]))
             push!(argtype_expr.args,Symbol(base_type))
         end
-        append!(ex.args, [call_string, string(constraint_list...), true, Symbol(base_type), argtype_expr, :( UInt64(a.ptr.ptr) + $offset + $(sizeof(base_type))*(index-1)), a1val])
+        append!(ex.args, [call_string, string(constraint_list...), true, Symbol(base_type), argtype_expr, :( UInt64(pointer(a)) + $offset + $(sizeof(base_type))*(index-1)), a1val])
         return :(Base.@_inline_meta; $ex)
     end).args)
 
