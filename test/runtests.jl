@@ -2,7 +2,7 @@ using Test
 using CUDAnative, CuArrays
 using CUDAatomics
 
-if CUDAnative.configured
+if CUDAnative.functional()
     function kern_atomicadd( a, b )
         i = (blockIdx().x-1) * blockDim().x + threadIdx().x
         atomicadd(a,b[i], 2)
