@@ -1,7 +1,7 @@
 name = "CUDAatomics"
 uuid = "7ef05209-3a99-504a-91f2-5551118e1dbe"
 authors = ["Alan Dion <alan.dion@gmail.com>"]
-version = "0.5.0"
+version = "0.4.0"
 
 [deps]
 CUDAnative = "be33ccc6-a3ff-5ff2-a52e-74243cff1e17"
